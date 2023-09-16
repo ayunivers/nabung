@@ -1,4 +1,7 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
+import 'package:nabung/screens/intro_2.dart';
 
 class intro1 extends StatefulWidget {
   const intro1({super.key});
@@ -8,6 +11,17 @@ class intro1 extends StatefulWidget {
 }
 
 class _intro1State extends State<intro1> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    Navigator.push(
+        context as BuildContext,
+        MaterialPageRoute(
+          builder: (context) => intro2(),
+        ));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

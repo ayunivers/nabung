@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nabung/screens/login.dart';
 
 class intro3 extends StatefulWidget {
   const intro3({super.key});
@@ -8,6 +9,17 @@ class intro3 extends StatefulWidget {
 }
 
 class _intro3State extends State<intro3> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => LoginPage(),
+        ));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +37,7 @@ class _intro3State extends State<intro3> {
                 return Column(
                   children: [
                     Text(
-                      'Control Pengeluaran',
+                      'Mendapat laporan tabungan',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           fontSize: 24,
@@ -45,7 +57,7 @@ class _intro3State extends State<intro3> {
                       height: 30,
                     ),
                     Text(
-                      'Anda dapat mengontrol pengeluaran anda ',
+                      'Anda akan mendapatkan laporan tabungan yang anda kelola',
                       textAlign: TextAlign.center,
                       style: TextStyle(fontSize: 16, color: Colors.black),
                     ),

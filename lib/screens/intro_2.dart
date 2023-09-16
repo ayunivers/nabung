@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nabung/screens/intro_3.dart';
 
 class intro2 extends StatefulWidget {
   const intro2({super.key});
@@ -8,6 +9,17 @@ class intro2 extends StatefulWidget {
 }
 
 class _intro2State extends State<intro2> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => intro3(),
+        ));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +51,7 @@ class _intro2State extends State<intro2> {
             return Column(
               children: [
                 Text(
-                  'Tambah Pemasukan',
+                  'Ambil uang tabungan',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       fontSize: 24,
@@ -59,7 +71,7 @@ class _intro2State extends State<intro2> {
                   height: 35,
                 ),
                 Text(
-                  'Anda dapat secara teratur  menambahkan pemasukan yang anda terima',
+                  'Anda dapat mengambil uang tabungan yang anda miliki',
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 16, color: Colors.black),
                 ),
